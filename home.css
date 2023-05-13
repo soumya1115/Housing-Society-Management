@@ -1,0 +1,150 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Spartan' sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h3 {
+    font-size: 36px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #e1e6ed;
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 16px;
+    color: #d1d9e6;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+body { 
+    margin:0;
+    padding:0;
+    background: url('image/login-page-background-images-hd-10.jpg');
+    background-size: cover;
+    background-position:center;
+}
+    
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.loginOption {
+  width:320px;
+  height:300px;
+  left:50%;
+  top:40%;
+  background-color:aquamarine;
+  position:absolute;
+  transform:translate(-50%,-50%);
+  box-sizing:border-box;
+}
+.loginOption li{
+    float:left;
+}
+.loginOption li a{
+    display:block;
+    padding:16px;
+    text-decoration:none;
+}
+    footer {
+        height: 200px;
+        width: 100%;
+        bottom: 0;
+        position: fixed;
+        background-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        color: white;
+    }
+
+    footer .col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    footer .logo {
+        margin-bottom: 30px;
+    }
+
+    footer h4 {
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
+
+    footer p {
+        font-size: 13px;
+        margin: 0 0 8px 0;
+    }
+
+    footer a {
+        font-size: 13px;
+        text-decoration: none;
+        color: #d1d9e6;
+        margin-bottom: 10px;
+    }
+
+    footer .follow {
+        margin-top: 20px;
+    }
+
+        footer .follow i {
+            color: #465b52;
+            padding-right: 4px;
+            cursor: pointer;
+        }
+
+    footer .install .row img {
+        border: 1px solid #088178;
+        border-radius: 6px;
+    }
+
+    footer .install img {
+        margin: 10px 0 15px 0;
+    }
+
+    footer .follow i:hover,
+    footer a:hover {
+        color: #088178;
+    }

@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Test </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/84a5a802d1.js" crossorigin="anonymous" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .box1 {
+            width: 100%;
+            height: 50px;
+            box-shadow: 30px 30px 34px rgba(0,0,0,0.03);
+            padding: 15px 0 0 10px;
+        }
+
+        .box2 {
+            width: 450px;
+            height: 200px;
+        }
+
+        div {
+            text-align: left;
+        }
+
+        span {
+            color: grey;
+        }
+
+        .project {
+            padding: 10px;
+        }
+
+        #feature {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+            #feature img {
+                width: 180px;
+                height: 180px;
+                object-fit: cover;
+            }
+
+            #feature .fe-box {
+                width: 490px;
+                height: 350px;
+                text-align: center;
+                box-shadow: 10px 10px 34px rgba(0,0,0,0.09);
+                border: 1px solid #cce7d0;
+                border-radius: 4px;
+                margin: 15px 0;
+            }
+
+            #feature .bh {
+                float: left
+            }
+
+        .sec-2 {
+            height: 75px;
+            padding: 10px 0 0 0;
+            width: 33%;
+            float: left;
+        }
+
+        .sec-3 {
+            height: 75px;
+            width: 33%;
+            float: left;
+        }
+        /* Fixed sidenav, full height */
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+            /* Style the sidenav links and the dropdown button */
+            .sidenav a, .dropdown-btn {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #f1f1f1;
+                display: block;
+                border: none;
+                background: none;
+                width: 100%;
+                text-align: left;
+                cursor: pointer;
+                outline: none;
+            }
+        /* Add an active class to the active dropdown button */
+        .active {
+            background-color: #3464eb;
+            color: white;
+        }
+
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        .dropdown-container {
+            display: none;
+            padding-left: 8px;
+        }
+
+        /* Optional: Style the caret down icon */
+        .fa-caret-down {
+            float: right;
+            padding-right: 8px;
+        }
+
+        .side-bot {
+            position: absolute;
+            bottom: 35px;
+            padding: 0 0 0 10px;
+            color: #42cbf5;
+        }
+
+        /* Some media queries for responsiveness */
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+                .sidenav a {
+                    font-size: 18px;
+                }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="box1">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Adyant Singh</a>
+                <a href="#">Notification</a>
+                <button class="dropdown-btn">
+                    My Project
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="#">-Bhoomi Hall</a>
+                    <a href="#">-Lorem ipsum</a>
+                    <a href="#">-Green View Heights</a>
+                    <a href="#">-Shivam Heights </a>
+                </div>
+                <div class="side-bot">
+                    <strong> SkyStruct</strong>
+                    <br />
+                    Prudenttec Inc.2018<br />
+                    All Rights Reserved
+                </div>
+            </div>
+            <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+            <script>
+                /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+                var dropdown = document.getElementsByClassName("dropdown-btn");
+                var i;
+
+                for (i = 0; i < dropdown.length; i++) {
+                    dropdown[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var dropdownContent = this.nextElementSibling;
+                        if (dropdownContent.style.display === "block") {
+                            dropdownContent.style.display = "none";
+                        } else {
+                            dropdownContent.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+            My Projects (5)
+        </div>
+    </header>
+
+    <section id="feature" class="section-p1">
+
+        <div class="fe-box">
+            <div class="box2">
+                <div class="bh">
+                    <img src="image/image1.jpg" />
+                </div>
+                <div class="bh">
+                    <div class="project">
+                        <span>Project</span>
+                        <p>Bhoomi Hall</p>
+                    </div>
+                    <div class="project">
+                        <span>Location</span>
+                        <p>Navi Mumbai</p>
+                    </div>
+                    <div class="project">
+                        <span>Developer</span>
+                        <p>Mulkiti</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="budget">
+                <hr />
+                <div class="sec-2">
+                    <span>Budget</span>
+                    <p>QAR 2,000</p>
+                </div>
+                <div class="sec-2">
+                    <span>Approved Payment</span>
+                    <p style="color:red;">QAR 65</p>
+                </div>
+                <div class="sec-2">
+                    <span>Duration(Days)</span>
+                    <p>41</p>
+                </div>
+            </div>
+            <div>
+                <div class="sec-3">
+                    <span>Days Elapsed</span>
+                    <p>7|17.07%</p>
+                </div>
+                <div class="sec-3">
+                    <span>Days Remaining</span>
+                    <p>34| 82.93%</p>
+                </div>
+                <div class="sec-3"></div>
+            </div>
+        </div>
+        <div class="fe-box">
+            <div class="box2">
+                <div class="bh">
+                    <img src="image/image2.jpg" />
+                </div>
+                <div class="bh">
+                    <div class="project">
+                        <span>Project</span>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                    <div class="project">
+                        <span>Location</span>
+                        <p>Navi Mumbai</p>
+                    </div>
+                    <div class="project">
+                        <span>Developer</span>
+                        <p>Anchor</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="budget">
+                <hr />
+                <div class="sec-2">
+                    <span>Budget</span>
+                    <p>QAR 2,000</p>
+                </div>
+                <div class="sec-2">
+                    <span>Approved Payment</span>
+                    <p style="color:red;">QAR 65</p>
+                </div>
+                <div class="sec-2">
+                    <span>Duration(Days)</span>
+                    <p>41</p>
+                </div>
+            </div>
+            <div>
+                <div class="sec-3">
+                    <span>Days Elapsed</span>
+                    <p>7|17.07%</p>
+                </div>
+                <div class="sec-3">
+                    <span>Days Remaining</span>
+                    <p>34| 82.93%</p>
+                </div>
+                <div class="sec-3"></div>
+            </div>
+        </div>
+        <div class="fe-box">
+            <div class="box2">
+                <div class="bh">
+                    <img src="image/admin.png" />
+                </div>
+                <div class="bh">
+                    <div class="project">
+                        <span>Project</span>
+                        <p>Green View Heights</p>
+                    </div>
+                    <div class="project">
+                        <span>Location</span>
+                        <p>Navi Mumbai</p>
+                    </div>
+                    <div class="project">
+                        <span>Developer</span>
+                        <p>Lodha</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="budget">
+                <hr />
+                <div class="sec-2">
+                    <span>Budget</span>
+                    <p>QAR 4,500</p>
+                </div>
+                <div class="sec-2">
+                    <span>Approved Payment</span>
+                    <p>QAR 3,000</p>
+                </div>
+                <div class="sec-2">
+                    <span>Duration(Days)</span>
+                    <p>80</p>
+                </div>
+            </div>
+            <div>
+                <div class="sec-3">
+                    <span>Days Elapsed</span>
+                    <p>10|12.5%</p>
+                </div>
+                <div class="sec-3">
+                    <span>Days Remaining</span>
+                    <p>70| 87.5%</p>
+                </div>
+                <div class="sec-3"></div>
+            </div>
+        </div>
+        <div class="fe-box">
+            <div class="box2">
+                <div class="bh">
+                    <img src="image/frontimage.jpg" />
+                </div>
+                <div class="bh">
+                    <div class="project">
+                        <span>Project</span>
+                        <p>Shivam Heights</p>
+                    </div>
+                    <div class="project">
+                        <span>Location</span>
+                        <p>Navi Mumbai</p>
+                    </div>
+                    <div class="project">
+                        <span>Developer</span>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="budget">
+                <hr />
+                <div class="sec-2">
+                    <span>Budget</span>
+                    <p>QAR 2,000</p>
+                </div>
+                <div class="sec-2">
+                    <span>Approved Payment</span>
+                    <p style="color:red;">QAR 65</p>
+                </div>
+                <div class="sec-2">
+                    <span>Duration(Days)</span>
+                    <p>20</p>
+                </div>
+            </div>
+            <div>
+                <div class="sec-3">
+                    <span>Days Elapsed</span>
+                    <p>10|50%</p>
+                </div>
+                <div class="sec-3">
+                    <span>Days Remaining</span>
+                    <p>10| 50%</p>
+                </div>
+                <div class="sec-3"></div>
+            </div>
+        </div>
+        <div class="fe-box">
+            <i class="fa-solid fa-plus" style="font-size:100px; color:black;"></i>
+            
+        </div>
+    </section>
+
+</body>
+</html>
